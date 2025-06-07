@@ -1,49 +1,135 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - PD_Store</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/PD_Store.styles.css" asp-append-version="true" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@ViewData["Title"] - Resuga</title>
+  
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/PD_Store.styles.css" asp-append-version="true" />
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PD_Store</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - PD_Store - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+<body class="bg-white font-sans min-h-screen flex flex-col">
+  <!-- Top Banner -->
+  <div class="bg-black text-white text-center text-sm py-2">
+    Tận hưởng giao hàng miễn phí toàn quốc với hoá đơn từ 99.000 đ
+  </div>
+
+  <!-- Header Navigation -->
+  <header>
+  <div class="flex justify-between items-center py-4 px-6 shadow bg-white">
+    <div class="flex items-center space-x-4">
+      <img src="/logo.svg" alt="Resuga Logo" class="h-8 w-auto">
+      <a href="/" class="text-xl font-bold text-gray-800">Resuga</a>
+    </div>
+    <nav class="hidden md:flex space-x-6 text-sm text-gray-700">
+      <a href="/" class="hover:text-black">Trang chủ</a>
+      <a href="/san-pham" class="hover:text-black">Sản phẩm</a>
+      <a href="/khuyen-mai" class="hover:text-black">Khuyến mãi</a>
+      <a href="/ve-chung-toi" class="hover:text-black">Về chúng tôi</a>
+      <a href="/lien-he" class="hover:text-black">Liên hệ</a>
+    </nav>
+    <div class="hidden md:flex space-x-4 text-sm">
+      <a href="/dang-nhap" class="hover:underline">Đăng nhập</a>
+      <a href="/gio-hang" class="hover:underline">Giỏ hàng</a>
+    </div>
+    <button class="md:hidden p-2 text-gray-600" aria-label="Mở menu">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+
+  <!-- Hero Section -->
+  @* <section class="grid grid-cols-1 md:grid-cols-2">
+    <div class="relative">
+      <img src="/images/trai-cay-nhiet-doi.jpg" alt="Hương trái cây nhiệt đới" class="w-full h-full object-cover">
+      <div class="absolute inset-0 flex items-center justify-center">
+        <h2 class="text-white text-3xl md:text-5xl font-bold text-center drop-shadow">HƯƠNG TRÁI CÂY NHIỆT ĐỚI</h2>
+      </div>
+      <button class="absolute left-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white px-2 py-1 rounded">&#8249;</button>
+    </div>
+    <div class="bg-yellow-100 p-8 flex flex-col justify-center">
+      <h3 class="text-gray-700 text-sm uppercase font-medium mb-2">Sản phẩm mới</h3>
+      <h1 class="text-3xl font-bold text-brown-800 mb-4">Gel tắm đường thốt nốt An Giang</h1>
+      <p class="text-gray-600 mb-6">Gel Tắm Đường Thốt Nốt An Giang không chỉ là một sản phẩm tắm, nó là cảm giác da được chạm vào bởi nắng, được làm sạch mà không bị lấy đi điều gì...</p>
+      <a href="#" class="bg-black text-white px-6 py-2 w-max">XEM NGAY</a>
+      <div class="flex justify-between items-center mt-4">
+        <div class="flex space-x-1">
+          <span class="w-2 h-2 rounded-full bg-gray-400"></span>
+          <span class="w-2 h-2 rounded-full bg-gray-200"></span>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+        <button class="bg-black bg-opacity-50 text-white px-2 py-1 rounded">&#8250;</button>
+      </div>
+    </div>
+  </section> *@
+
+<main class="flex-grow px-6 py-10 text-center">
+  @RenderBody()
+</main>
+
+
+ <footer class="flex flex-col w-full lg:flex-row h-100 overflow-hidden">
+<img src="https://png.pngtree.com/background/20240911/original/pngtree-sugar-cane-fields-from-a-birds-eye-view-during-sunset-photo-picture-image_10477235.jpg" class="w-full h-full object-cover" alt="Footer Image" />
+  <div class="flex flex-col justify-between w-full lg:w-1/2 bg-yellow-100">
+    <div class="px-6 py-8">
+      <h1 class="mb-4 text-xl font-semibold text-gray-800">
+        Đăng ký để nhận thông tin khuyến mãi sớm nhất từ Resuga
+      </h1>
+      <form class="flex items-center border-b border-gray-300 pb-2">
+        <input type="email" placeholder="Nhập địa chỉ email" class="flex-1 bg-yellow-100 outline-none placeholder-gray-500">
+        <button type="submit" class="text-gray-700 ml-2">➡️</button>
+      </form>
+      <p class="mt-2 text-sm italic text-gray-500">
+        Đăng ký để nhận thông tin liên lạc về sản phẩm, ưu đãi, sự kiện từ Resuga.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 text-sm text-gray-700">
+        <div>
+          <h3 class="font-semibold mb-2">Hỗ trợ khách hàng</h3>
+          <ul class="space-y-1">
+            <li><a href="/hoi-dap" class="hover:underline">Hỏi đáp</a></li>
+            <li><a href="/huong-dan-mua-hang" class="hover:underline">Hướng dẫn mua hàng</a></li>
+            <li><a href="/chinh-sach-ban-hang" class="hover:underline">Chính sách bán hàng</a></li>
+            <li><a href="/bao-mat" class="hover:underline">Điều khoản bảo mật</a></li>
+            <li><a href="/lien-he" class="hover:underline">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2">Danh mục</h3>
+          <ul class="space-y-1">
+            <li><a href="/san-pham-moi" class="hover:underline">Sản phẩm mới</a></li>
+            <li><a href="/duong-da" class="hover:underline">Dưỡng da</a></li>
+            <li><a href="/cham-soc-toc" class="hover:underline">Chăm sóc tóc</a></li>
+            <li><a href="/tam-duong-the" class="hover:underline">Tắm & Dưỡng thể</a></li>
+            <li><a href="/combo" class="hover:underline">Combo sản phẩm</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-6 text-sm text-gray-600">
+        <p><strong>Địa chỉ:</strong> 123 Đường ABC, Quận 1, TP.HCM</p>
+        <p><strong>Hotline:</strong> <a href="tel:19009300" class="underline">19009300</a> – <strong>Email:</strong> <a href="mailto:info@resuga.vn" class="underline">info@resuga.vn</a></p>
+      </div>
+    </div>
+    <div class="bg-yellow-200 text-center text-xs py-2 text-gray-700">
+      © 2025 Resuga. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+  <button class="fixed bottom-4 right-4 bg-yellow-200 px-4 py-2 rounded-full shadow-md">Liên hệ</button>
+
+  <script src="~/lib/jquery/dist/jquery.min.js"></script>
+  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="~/js/site.js" asp-append-version="true"></script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs" defer asp-append-version="true"></script>
+  @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Q0oUq7HdBh4ZXQFNrgp8+d/tGX7FMysrFXLE30qRMBc=",
+  "Hash": "m+H86m4xKwVBMXsZh7GjJi4EAcysRCSaAze1XYYazDk=",
   "Source": "PD-Store",
   "BasePath": "_content/PD-Store",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "5yv4jjiek4",
-      "Integrity": "Q8awmSIRFUXdHfdad53yGwAEd+haRpcG9HSzdtIAyvQ=",
+      "Fingerprint": "39xrjug2m1",
+      "Integrity": "F4wRW7ND3Uw+3gnL3biaJarKX4tjiRUzW8hLobLrFEQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PD-Store.styles.css"
@@ -52,11 +52,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "5yv4jjiek4",
-      "Integrity": "Q8awmSIRFUXdHfdad53yGwAEd+haRpcG9HSzdtIAyvQ=",
+      "Fingerprint": "39xrjug2m1",
+      "Integrity": "F4wRW7ND3Uw+3gnL3biaJarKX4tjiRUzW8hLobLrFEQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PD-Store.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\css\\Home\\homepage.css",
+      "SourceId": "PD-Store",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\",
+      "BasePath": "_content/PD-Store",
+      "RelativePath": "css/Home/homepage#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "624impevn6",
+      "Integrity": "Dl+2m7JBfF9qIuSrCKtsiv0EdE2WNlJJLlxA1C4iMdc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Home\\homepage.css"
     },
     {
       "Identity": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\css\\site.css",
@@ -73,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "c2tiyv64ts",
-      "Integrity": "pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=",
+      "Fingerprint": "51725pw39f",
+      "Integrity": "54bCftzdBGf+TpbYjCsoxOfpvyf54UlWjOexx1sFxjI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -99,6 +120,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\img\\Product-v1-TaiCheBaMia-VatLieuCachAm.png",
+      "SourceId": "PD-Store",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\",
+      "BasePath": "_content/PD-Store",
+      "RelativePath": "img/Product-v1-TaiCheBaMia-VatLieuCachAm#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nvgtryldhc",
+      "Integrity": "TbIWhq38KDCqRWfYw4ahr6RPoHICFntNf81owHUJMsE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Product-v1-TaiCheBaMia-VatLieuCachAm.png"
+    },
+    {
+      "Identity": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\img\\Slogan.png",
+      "SourceId": "PD-Store",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\",
+      "BasePath": "_content/PD-Store",
+      "RelativePath": "img/Slogan#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "75gs1w8sgx",
+      "Integrity": "u+EdFH5TDfBcBhc0c4Vw4pDqkXDmOGxpYR3E7T3YxoM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Slogan.png"
     },
     {
       "Identity": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\js\\site.js",
@@ -1321,8 +1384,8 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.c2tiyv64ts.css",
-      "AssetFile": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\css\\site.css",
+      "Route": "css/Home/homepage.624impevn6.css",
+      "AssetFile": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\css\\Home\\homepage.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1331,7 +1394,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "314"
         },
         {
           "Name": "Content-Type",
@@ -1339,11 +1402,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"Dl+2m7JBfF9qIuSrCKtsiv0EdE2WNlJJLlxA1C4iMdc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 02:36:44 GMT"
+          "Value": "Sat, 07 Jun 2025 03:04:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1353,7 +1416,89 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c2tiyv64ts"
+          "Value": "624impevn6"
+        },
+        {
+          "Name": "label",
+          "Value": "css/Home/homepage.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Dl+2m7JBfF9qIuSrCKtsiv0EdE2WNlJJLlxA1C4iMdc="
+        }
+      ]
+    },
+    {
+      "Route": "css/Home/homepage.css",
+      "AssetFile": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\css\\Home\\homepage.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "314"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Dl+2m7JBfF9qIuSrCKtsiv0EdE2WNlJJLlxA1C4iMdc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Jun 2025 03:04:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Dl+2m7JBfF9qIuSrCKtsiv0EdE2WNlJJLlxA1C4iMdc="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.51725pw39f.css",
+      "AssetFile": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "420"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"54bCftzdBGf+TpbYjCsoxOfpvyf54UlWjOexx1sFxjI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Jun 2025 03:29:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "51725pw39f"
         },
         {
           "Name": "label",
@@ -1361,7 +1506,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-54bCftzdBGf+TpbYjCsoxOfpvyf54UlWjOexx1sFxjI="
         }
       ]
     },
@@ -1376,7 +1521,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "420"
         },
         {
           "Name": "Content-Type",
@@ -1384,11 +1529,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"54bCftzdBGf+TpbYjCsoxOfpvyf54UlWjOexx1sFxjI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 02:36:44 GMT"
+          "Value": "Sat, 07 Jun 2025 03:29:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1398,7 +1543,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-54bCftzdBGf+TpbYjCsoxOfpvyf54UlWjOexx1sFxjI="
         }
       ]
     },
@@ -1481,6 +1626,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "img/Product-v1-TaiCheBaMia-VatLieuCachAm.nvgtryldhc.png",
+      "AssetFile": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\img\\Product-v1-TaiCheBaMia-VatLieuCachAm.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1862760"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TbIWhq38KDCqRWfYw4ahr6RPoHICFntNf81owHUJMsE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Jun 2025 01:44:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nvgtryldhc"
+        },
+        {
+          "Name": "label",
+          "Value": "img/Product-v1-TaiCheBaMia-VatLieuCachAm.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TbIWhq38KDCqRWfYw4ahr6RPoHICFntNf81owHUJMsE="
+        }
+      ]
+    },
+    {
+      "Route": "img/Product-v1-TaiCheBaMia-VatLieuCachAm.png",
+      "AssetFile": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\img\\Product-v1-TaiCheBaMia-VatLieuCachAm.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1862760"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TbIWhq38KDCqRWfYw4ahr6RPoHICFntNf81owHUJMsE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Jun 2025 01:44:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TbIWhq38KDCqRWfYw4ahr6RPoHICFntNf81owHUJMsE="
+        }
+      ]
+    },
+    {
+      "Route": "img/Slogan.75gs1w8sgx.png",
+      "AssetFile": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\img\\Slogan.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1753657"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u+EdFH5TDfBcBhc0c4Vw4pDqkXDmOGxpYR3E7T3YxoM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Jun 2025 03:19:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "75gs1w8sgx"
+        },
+        {
+          "Name": "label",
+          "Value": "img/Slogan.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u+EdFH5TDfBcBhc0c4Vw4pDqkXDmOGxpYR3E7T3YxoM="
+        }
+      ]
+    },
+    {
+      "Route": "img/Slogan.png",
+      "AssetFile": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\img\\Slogan.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1753657"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u+EdFH5TDfBcBhc0c4Vw4pDqkXDmOGxpYR3E7T3YxoM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Jun 2025 03:19:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u+EdFH5TDfBcBhc0c4Vw4pDqkXDmOGxpYR3E7T3YxoM="
         }
       ]
     },
@@ -6241,7 +6550,7 @@
       ]
     },
     {
-      "Route": "PD-Store.5yv4jjiek4.bundle.scp.css",
+      "Route": "PD-Store.39xrjug2m1.bundle.scp.css",
       "AssetFile": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PD-Store.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6251,7 +6560,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1126"
+          "Value": "1195"
         },
         {
           "Name": "Content-Type",
@@ -6259,11 +6568,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Q8awmSIRFUXdHfdad53yGwAEd+haRpcG9HSzdtIAyvQ=\""
+          "Value": "\"F4wRW7ND3Uw+3gnL3biaJarKX4tjiRUzW8hLobLrFEQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 31 May 2025 10:19:24 GMT"
+          "Value": "Sat, 07 Jun 2025 03:43:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6273,7 +6582,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "5yv4jjiek4"
+          "Value": "39xrjug2m1"
         },
         {
           "Name": "label",
@@ -6281,12 +6590,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Q8awmSIRFUXdHfdad53yGwAEd+haRpcG9HSzdtIAyvQ="
+          "Value": "sha256-F4wRW7ND3Uw+3gnL3biaJarKX4tjiRUzW8hLobLrFEQ="
         }
       ]
     },
     {
-      "Route": "PD-Store.5yv4jjiek4.styles.css",
+      "Route": "PD-Store.39xrjug2m1.styles.css",
       "AssetFile": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PD-Store.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6296,7 +6605,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1126"
+          "Value": "1195"
         },
         {
           "Name": "Content-Type",
@@ -6304,11 +6613,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Q8awmSIRFUXdHfdad53yGwAEd+haRpcG9HSzdtIAyvQ=\""
+          "Value": "\"F4wRW7ND3Uw+3gnL3biaJarKX4tjiRUzW8hLobLrFEQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 31 May 2025 10:19:24 GMT"
+          "Value": "Sat, 07 Jun 2025 03:43:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6318,7 +6627,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "5yv4jjiek4"
+          "Value": "39xrjug2m1"
         },
         {
           "Name": "label",
@@ -6326,7 +6635,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Q8awmSIRFUXdHfdad53yGwAEd+haRpcG9HSzdtIAyvQ="
+          "Value": "sha256-F4wRW7ND3Uw+3gnL3biaJarKX4tjiRUzW8hLobLrFEQ="
         }
       ]
     },
@@ -6341,7 +6650,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1126"
+          "Value": "1195"
         },
         {
           "Name": "Content-Type",
@@ -6349,11 +6658,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Q8awmSIRFUXdHfdad53yGwAEd+haRpcG9HSzdtIAyvQ=\""
+          "Value": "\"F4wRW7ND3Uw+3gnL3biaJarKX4tjiRUzW8hLobLrFEQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 31 May 2025 10:19:24 GMT"
+          "Value": "Sat, 07 Jun 2025 03:43:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6363,7 +6672,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Q8awmSIRFUXdHfdad53yGwAEd+haRpcG9HSzdtIAyvQ="
+          "Value": "sha256-F4wRW7ND3Uw+3gnL3biaJarKX4tjiRUzW8hLobLrFEQ="
         }
       ]
     },
@@ -6378,7 +6687,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1126"
+          "Value": "1195"
         },
         {
           "Name": "Content-Type",
@@ -6386,11 +6695,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Q8awmSIRFUXdHfdad53yGwAEd+haRpcG9HSzdtIAyvQ=\""
+          "Value": "\"F4wRW7ND3Uw+3gnL3biaJarKX4tjiRUzW8hLobLrFEQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 31 May 2025 10:19:24 GMT"
+          "Value": "Sat, 07 Jun 2025 03:43:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6400,7 +6709,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Q8awmSIRFUXdHfdad53yGwAEd+haRpcG9HSzdtIAyvQ="
+          "Value": "sha256-F4wRW7ND3Uw+3gnL3biaJarKX4tjiRUzW8hLobLrFEQ="
         }
       ]
     }

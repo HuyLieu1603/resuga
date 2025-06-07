@@ -2,7 +2,11 @@
   "Files": [
     {
       "Id": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PD-Store.bundle.scp.css",
-      "PackagePath": "staticwebassets\\PD-Store.5yv4jjiek4.bundle.scp.css"
+      "PackagePath": "staticwebassets\\PD-Store.39xrjug2m1.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\css\\Home\\homepage.css",
+      "PackagePath": "staticwebassets\\css\\Home\\homepage.css"
     },
     {
       "Id": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\css\\site.css",
@@ -11,6 +15,14 @@
     {
       "Id": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\img\\Product-v1-TaiCheBaMia-VatLieuCachAm.png",
+      "PackagePath": "staticwebassets\\img\\Product-v1-TaiCheBaMia-VatLieuCachAm.png"
+    },
+    {
+      "Id": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\img\\Slogan.png",
+      "PackagePath": "staticwebassets\\img\\Slogan.png"
     },
     {
       "Id": "D:\\HuyLieu\\PhuongDungShop\\PD-Store\\wwwroot\\js\\site.js",

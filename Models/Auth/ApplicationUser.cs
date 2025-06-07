@@ -40,7 +40,7 @@ namespace PD_Store.Models.Auth
 
         public string? DisplayName { get; set; }
 
-        public ICollection<ApplicationUserRole> UserRoles { get; set; }
+        public ICollection<ApplicationUserRole> UserRoles { get; set; } = new List<ApplicationUserRole>();
     }
 
     public class ApplicationUserRole : IdentityUserRole<string>
