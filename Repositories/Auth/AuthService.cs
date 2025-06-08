@@ -48,8 +48,15 @@ namespace PD_Store.Repositories.Auth
                     return result;
                 }
 
-                var newUser = new IdentityUser { UserName = register.UserName, Email = register.Email };
-                var resultUser = await _userManager.CreateAsync((ApplicationUser)newUser, register.Password);
+                var newUser = new ApplicationUser
+                {
+                    UserName = register.UserName,
+                    Email = register.Email,
+                    FullName = "",
+                    Role = "",
+                    CreateBy = "System" // hoặc lấy từ người dùng hiện tại
+                };
+                var resultUser = await _userManager.CreateAsync(newUser, register.Password);
 
                 if (resultUser.Succeeded)
                 {
@@ -65,7 +72,7 @@ namespace PD_Store.Repositories.Auth
             {
                 _logger.LogError(ex, ex.Message);
                 result.Status = Helper.Contants.StatusCodeInternalServerError;
-                result.Message = "Không thể đăng nhập vào hệ thống, vui lòng báo IT Admin";
+                result.Message = "Không thể đăng ký vào hệ thống, vui lòng báo IT Admin";
             }
             return result;
         }

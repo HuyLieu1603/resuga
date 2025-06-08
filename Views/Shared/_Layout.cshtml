@@ -5,18 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>@ViewData["Title"] - Resuga</title>
   
+ <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico" />
+
   <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- SweetAlert2  -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+
+
   <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-  <link rel="stylesheet" href="~/PD_Store.styles.css" asp-append-version="true" />
+  @* <link rel="stylesheet" href="~/PD_Store.styles.css" asp-append-version="true" /> *@
 </head>
 
 
 <body class="bg-white font-sans min-h-screen flex flex-col">
   <!-- Top Banner -->
   <div class="bg-black text-white text-center text-sm py-2">
-    Tận hưởng giao hàng miễn phí toàn quốc với hoá đơn từ 199.000 đ
+    Tận hưởng giao hàng miễn phí toàn quốc với hoá đơn từ 999.000 đ
   </div>
 
   <!-- Header Navigation -->
@@ -34,11 +47,31 @@
       <a href="/lien-he" class="hover:text-black">Liên hệ</a>
     </nav>
     <div class="hidden md:flex space-x-4 text-sm">
-      <a href="/auth/index" class="hover:underline">Đăng nhập</a>
-      <div>
-        <a href="/gio-hang" class="hover:underline">Giỏ hàng</a>
-      </div>
+    @if (User.Identity?.IsAuthenticated == true)
+    {
+        <div x-data="{ open: false }" class="relative">
+    <button @@click="open = !open" class="hover:underline">
+        👤 @User.Identity.Name
+    </button>
+
+    <div x-show="open" @@click.away="open = false"
+         class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
+        <a href="/user/profile" class="block px-4 py-2 hover:bg-gray-100 text-sm">Thông tin cá nhân</a>
+        <a href="/auth/logout" class="block px-4 py-2 hover:bg-gray-100 text-sm">Đăng xuất</a>
     </div>
+</div>
+
+    }
+    else
+    {
+        <a href="/auth/index" class="hover:underline">Đăng nhập</a>
+    }
+
+    <div>
+        <a href="/gio-hang" class="hover:underline">Giỏ hàng</a>
+    </div>
+</div>
+
     <button class="md:hidden p-2 text-gray-600" aria-label="Mở menu">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -141,14 +174,22 @@
 
   <button class="fixed bottom-4 right-4 bg-yellow-200 px-4 py-2 rounded-full shadow-md">Liên hệ</button>
 
-  <script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="~/js/site.js" asp-append-version="true"></script>
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs" defer asp-append-version="true"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.4/dist/cdn.min.js"></script>
+<!-- JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" asp-append-version="true"></script>
 <script>
-  AOS.init();
+  AOS.init({
+    once: false,            // chạy lại mỗi lần scroll (nếu cần)
+    duration: 1000,         // thời gian hiệu ứng
+    offset: 120             // khoảng cách bắt đầu hiệu ứng từ viewport
+  });
 </script>
   @await RenderSectionAsync("Scripts", required: false)
 </body>

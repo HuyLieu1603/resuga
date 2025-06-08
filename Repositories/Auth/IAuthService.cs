@@ -13,5 +13,8 @@ namespace PD_Store.Repositories.Auth
 
         public Task<DataResult<string>> Login(LoginRequestVM login, string returnUrl);
 
+        public Task LogOut();
+
+
     }
 }

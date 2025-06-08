@@ -15,7 +15,18 @@ builder.Services.AddDbContext<AdminDbContext>(
 
 builder.Services.AddCustomServices();
 
-builder.Services.ConfigureCookie(builder.Configuration);
+// builder.Services.ConfigureCookie(builder.Configuration);
+var isDevelopment = builder.Environment.IsDevelopment();
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.Cookie.Name = ".Resuga.Auth";
+    // options.Cookie.SameSite = SameSiteMode.None;                 // bắt buộc phải là None nếu cross-origin
+    // options.Cookie.SecurePolicy = CookieSecurePolicy.Always;    // bắt buộc HTTPS
+
+    options.Cookie.SameSite = isDevelopment ? SameSiteMode.Lax : SameSiteMode.None;
+    options.Cookie.SecurePolicy = isDevelopment ? CookieSecurePolicy.SameAsRequest : CookieSecurePolicy.Always;
+});
 
 //Add Identity
 builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(opt =>
@@ -50,8 +61,11 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+
+
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

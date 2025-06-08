@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using PD_Store.Models.Auth;
@@ -10,7 +11,15 @@ using PD_Store.Models.Product;
 
 namespace PD_Store.DbContextFolder
 {
-    public class AdminDbContext : IdentityDbContext<ApplicationUser>
+    public class AdminDbContext : IdentityDbContext<
+    ApplicationUser,
+    ApplicationRole,
+    string,
+    IdentityUserClaim<string>,
+    ApplicationUserRole,
+    IdentityUserLogin<string>,
+    IdentityRoleClaim<string>,
+    IdentityUserToken<string>>
     {
         public AdminDbContext(DbContextOptions<AdminDbContext> options) : base(options)
         {
