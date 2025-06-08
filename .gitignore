@@ -270,6 +270,8 @@ paket-files/
 __pycache__/
 *.pyc
 
+
+obj/
 # Cake - Uncomment if you are using it
 # tools/
 
