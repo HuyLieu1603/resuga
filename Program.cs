@@ -1,3 +1,4 @@
+using Dashboard.Extension;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using PD_Store.DbContextFolder;
@@ -12,6 +13,10 @@ builder.Services.AddDbContext<AdminDbContext>(
               options => options.UseSqlServer(builder.Configuration.GetConnectionString("AuthConnection"))
             );
 
+builder.Services.AddCustomServices();
+
+builder.Services.ConfigureCookie(builder.Configuration);
+
 //Add Identity
 builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(opt =>
 {
@@ -25,6 +30,12 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(opt =>
 })
  .AddEntityFrameworkStores<AdminDbContext>()
  .AddDefaultTokenProviders();
+
+// Read Kestrel configuration
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.Configure(builder.Configuration.GetSection("Kestrel"));
+});
 
 var app = builder.Build();
 

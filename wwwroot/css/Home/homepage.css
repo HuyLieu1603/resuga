@@ -1,15 +1,27 @@
 .introduce-main-product {
   margin-top: 20px;
-  border: 1px solid #1b1111;
   min-height: 500px;
   max-height: 100vh;
+  background-color: bisque;
 }
 
 @keyframes marquee-scroll {
-  0%   { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .marquee__children {
   animation: marquee-scroll 20s linear infinite;
+}
+
+.marquee-item {
+  display: inline-block;
+  margin-right: 4rem; /* khoảng cách giữa các item */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2b2118;
 }

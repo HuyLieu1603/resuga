@@ -16,15 +16,15 @@
 <body class="bg-white font-sans min-h-screen flex flex-col">
   <!-- Top Banner -->
   <div class="bg-black text-white text-center text-sm py-2">
-    Tận hưởng giao hàng miễn phí toàn quốc với hoá đơn từ 99.000 đ
+    Tận hưởng giao hàng miễn phí toàn quốc với hoá đơn từ 199.000 đ
   </div>
 
   <!-- Header Navigation -->
   <header>
   <div class="flex justify-between items-center py-4 px-6 shadow bg-white">
     <div class="flex items-center space-x-4">
-      <img src="/logo.svg" alt="Resuga Logo" class="h-8 w-auto">
-      <a href="/" class="text-xl font-bold text-gray-800">Resuga</a>
+      <img src="/img/logo.png" alt="Resuga Logo" class="h-full w-auto">
+      @* <a href="/" class="text-xl font-bold text-gray-800">Resuga</a> *@
     </div>
     <nav class="hidden md:flex space-x-6 text-sm text-gray-700">
       <a href="/" class="hover:text-black">Trang chủ</a>
@@ -34,8 +34,10 @@
       <a href="/lien-he" class="hover:text-black">Liên hệ</a>
     </nav>
     <div class="hidden md:flex space-x-4 text-sm">
-      <a href="/dang-nhap" class="hover:underline">Đăng nhập</a>
-      <a href="/gio-hang" class="hover:underline">Giỏ hàng</a>
+      <a href="/auth/index" class="hover:underline">Đăng nhập</a>
+      <div>
+        <a href="/gio-hang" class="hover:underline">Giỏ hàng</a>
+      </div>
     </div>
     <button class="md:hidden p-2 text-gray-600" aria-label="Mở menu">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
@@ -70,66 +72,84 @@
     </div>
   </section> *@
 
-<main class="flex-grow px-6 py-10 text-center">
+<main class="flex-grow text-center">
   @RenderBody()
 </main>
 
 
- <footer class="flex flex-col w-full lg:flex-row h-100 overflow-hidden">
-<img src="https://png.pngtree.com/background/20240911/original/pngtree-sugar-cane-fields-from-a-birds-eye-view-during-sunset-photo-picture-image_10477235.jpg" class="w-full h-full object-cover" alt="Footer Image" />
-  <div class="flex flex-col justify-between w-full lg:w-1/2 bg-yellow-100">
-    <div class="px-6 py-8">
-      <h1 class="mb-4 text-xl font-semibold text-gray-800">
-        Đăng ký để nhận thông tin khuyến mãi sớm nhất từ Resuga
-      </h1>
-      <form class="flex items-center border-b border-gray-300 pb-2">
-        <input type="email" placeholder="Nhập địa chỉ email" class="flex-1 bg-yellow-100 outline-none placeholder-gray-500">
-        <button type="submit" class="text-gray-700 ml-2">➡️</button>
-      </form>
-      <p class="mt-2 text-sm italic text-gray-500">
-        Đăng ký để nhận thông tin liên lạc về sản phẩm, ưu đãi, sự kiện từ Resuga.
-      </p>
+<footer class="w-full text-gray-700 border-t border-gray-200" style="background-color: bisque;">
+  <div class="flex flex-col lg:flex-row">
+    <!-- Image block -->
+    <div class="lg:w-1/2 w-full h-80 lg:h-auto">
+      <img src="/img/footer-v2.png" alt="Tấm cách âm từ mía" class="object-cover w-full h-full" />
+    </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 text-sm text-gray-700">
+    <!-- Info block -->
+    <div class="lg:w-1/2 w-full px-6 py-10 flex flex-col justify-between">
+      <!-- Newsletter -->
+      <div>
+        <h2 class="text-2xl font-bold text-green-800 mb-2">Bền vững từ thiên nhiên</h2>
+        <p class="mb-4 text-sm text-gray-600">Tấm cách âm tái chế từ mía – Giải pháp thân thiện với môi trường & hiệu quả cho mọi không gian.</p>
+        <form class="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
+          <input type="email" placeholder="Nhập email để nhận tin ưu đãi" class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none" />
+          <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-md">Gửi</button>
+        </form>
+      </div>
+
+      <!-- Quick links -->
+      <div class="grid grid-cols-2 gap-6 mt-8 text-sm">
         <div>
-          <h3 class="font-semibold mb-2">Hỗ trợ khách hàng</h3>
+          <h3 class="font-semibold text-green-800 mb-2">Hỗ trợ</h3>
           <ul class="space-y-1">
             <li><a href="/hoi-dap" class="hover:underline">Hỏi đáp</a></li>
             <li><a href="/huong-dan-mua-hang" class="hover:underline">Hướng dẫn mua hàng</a></li>
             <li><a href="/chinh-sach-ban-hang" class="hover:underline">Chính sách bán hàng</a></li>
-            <li><a href="/bao-mat" class="hover:underline">Điều khoản bảo mật</a></li>
+            <li><a href="/bao-mat" class="hover:underline">Bảo mật</a></li>
             <li><a href="/lien-he" class="hover:underline">Liên hệ</a></li>
           </ul>
-        </div>
+        </div>  
         <div>
-          <h3 class="font-semibold mb-2">Danh mục</h3>
+          <h3 class="font-semibold text-green-800 mb-2">Tổng quan</h3>
           <ul class="space-y-1">
             <li><a href="/san-pham-moi" class="hover:underline">Sản phẩm mới</a></li>
-            <li><a href="/duong-da" class="hover:underline">Dưỡng da</a></li>
-            <li><a href="/cham-soc-toc" class="hover:underline">Chăm sóc tóc</a></li>
-            <li><a href="/tam-duong-the" class="hover:underline">Tắm & Dưỡng thể</a></li>
-            <li><a href="/combo" class="hover:underline">Combo sản phẩm</a></li>
+            <li><a href="/duong-da" class="hover:underline">Dịch vụ lắp đặt cách âm</a></li>
+            <li><a href="/cham-soc-toc" class="hover:underline">Dịch vụ tư vấn kỹ thuật</a></li>
+            <li><a href="/tam-duong-the" class="hover:underline">Sản phẩm phụ </a></li>
+            <ul>
+            <li><a href="/combo" class="hover:underline">- Compost từ bã mía</a></li>
+              <li><a href="/combo/2" class="hover:underline">- Viên nén sinh học</a></li>
+            </ul>
           </ul>
         </div>
       </div>
 
-      <div class="mt-6 text-sm text-gray-600">
-        <p><strong>Địa chỉ:</strong> 123 Đường ABC, Quận 1, TP.HCM</p>
-        <p><strong>Hotline:</strong> <a href="tel:19009300" class="underline">19009300</a> – <strong>Email:</strong> <a href="mailto:info@resuga.vn" class="underline">info@resuga.vn</a></p>
+      <!-- Contact -->
+      <div class="mt-6 text-sm">
+        <p><strong>Địa chỉ:</strong> 68/69, Đặng Thùy Trâm, Gò Vấp, TP.HCM</p>
+        <p><strong>Hotline:</strong> <a href="tel:+84123456789" class="underline">+84 123 456 789</a></p>
+        <p><strong>Email:</strong> <a href="mailto:resuga@gmail.com" class="underline">resuga@gmail.com</a></p>
       </div>
     </div>
-    <div class="bg-yellow-200 text-center text-xs py-2 text-gray-700">
-      © 2025 Resuga. All rights reserved.
-    </div>
+  </div>
+
+  <!-- Footer bottom -->
+  <div class="text-center text-xs bg-green-100 py-3 text-gray-600" style="background-color: rgb(245, 210, 167);">
+    © 2025 Resuga – Lan tỏa giá trị sống xanh & bền vững.
   </div>
 </footer>
+
 
   <button class="fixed bottom-4 right-4 bg-yellow-200 px-4 py-2 rounded-full shadow-md">Liên hệ</button>
 
   <script src="~/lib/jquery/dist/jquery.min.js"></script>
   <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="~/js/site.js" asp-append-version="true"></script>
-<script src="https://cdn.jsdelivr.net/npm/alpinejs" defer asp-append-version="true"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs" defer asp-append-version="true"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js" asp-append-version="true"></script>
+<script>
+  AOS.init();
+</script>
   @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

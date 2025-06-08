@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PD-Store")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4bd3be31dbe39d1eb3de954d974ddda9e6b4f1d0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0913c5d75b29c5d1103756aab17b1722544dec8")]
 [assembly: System.Reflection.AssemblyProductAttribute("PD-Store")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PD-Store")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -11,7 +11,7 @@ using PD_Store.ViewModels.Auth;
 
 namespace PD_Store.Repositories.Auth
 {
-    public class AuthService
+    public class AuthService : IAuthService
     {
         private readonly AdminDbContext _context;
 
