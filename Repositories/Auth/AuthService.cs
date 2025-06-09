@@ -58,6 +58,13 @@ namespace PD_Store.Repositories.Auth
                 };
                 var resultUser = await _userManager.CreateAsync(newUser, register.Password);
 
+                if (resultUser.Errors.Any())
+                {
+                    result.Status = Helper.Contants.StatusCodeBadRequest;
+                    result.Message = string.Join(", ", resultUser.Errors.Select(TranslateIdentityError));
+                    return result;
+                }
+
                 if (resultUser.Succeeded)
                 {
                     await _signInManager.SignInAsync((ApplicationUser)newUser, isPersistent: false);
@@ -183,6 +190,23 @@ namespace PD_Store.Repositories.Auth
             return new DataResult<bool>
             {
                 Status = Contants.StatusCodeSuccessed,
+            };
+        }
+
+        private string TranslateIdentityError(IdentityError error)
+        {
+            return error.Code switch
+            {
+                "DuplicateUserName" => "Tên đăng nhập đã được sử dụng.",
+                "DuplicateEmail" => "Email đã được sử dụng.",
+                "InvalidEmail" => "Email không hợp lệ.",
+                "InvalidUserName" => "Tên đăng nhập không hợp lệ.",
+                "PasswordTooShort" => "Mật khẩu quá ngắn.",
+                "PasswordRequiresNonAlphanumeric" => "Mật khẩu cần chứa ít nhất một ký tự đặc biệt.",
+                "PasswordRequiresDigit" => "Mật khẩu cần chứa ít nhất một chữ số.",
+                "PasswordRequiresUpper" => "Mật khẩu cần chứa ít nhất một chữ in hoa.",
+                "PasswordRequiresLower" => "Mật khẩu cần chứa ít nhất một chữ thường.",
+                _ => error.Description // fallback nếu chưa dịch
             };
         }
 
