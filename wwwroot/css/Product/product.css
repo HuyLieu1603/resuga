@@ -1,0 +1,10 @@
+.container {
+  margin: auto;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.carousel-inner img {
+  height: 700px;
+  object-fit: fill;
+}

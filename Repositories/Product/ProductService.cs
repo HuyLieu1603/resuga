@@ -7,10 +7,11 @@ using Microsoft.EntityFrameworkCore;
 using PD_Store.DbContextFolder;
 using PD_Store.Helper;
 using PD_Store.Models.Product;
+using PD_Store.ViewModels.Product;
 
 namespace PD_Store.Repositories.Product
 {
-    public class ProductService :IProductService
+    public class ProductService : IProductService
     {
         private readonly AdminDbContext _context;
 
@@ -79,5 +80,44 @@ namespace PD_Store.Repositories.Product
             }
         }
 
+        public async Task<DataResult<bool>> CreateProduct(ProductVM product)
+        {
+            try
+            {
+                _context.Products.Add(new Products
+                {
+                    ProductName = product.ProductName,
+                    Price = product.Price,
+                    Weight = product.Weight,
+                    NRC = product.NRC,
+                    STC = product.STC,
+                    FireResistance = product.FireResistance,
+                    StockQuantity = product.StockQuantity,
+                    Desc = product.Desc,
+                    ListProductImages = product.ListProductImages?.Select(img => new ProductImages
+                    {
+                        ImageLink = img.ImageLink
+                    }).ToList()
+                });
+                await _context.SaveChangesAsync();
+
+                return new DataResult<bool>
+                {
+                    Status = Contants.StatusCodeSuccessed,
+                    Message = "Product created successfully.",
+                    Data = true
+                };
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while creating product.");
+                return new DataResult<bool>
+                {
+                    Status = Contants.StatusCodeInternalServerError,
+                    Message = "An error occurred while creating the product."
+                };
+            }
+
+        }
     }
 }

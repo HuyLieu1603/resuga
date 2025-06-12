@@ -8,14 +8,22 @@
  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico" />
 
+<link href="https://cdn3.devexpress.com/jslib/latest/css/dx.light.css" rel="stylesheet" />
+
+
   <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+
+<link href="https://cdn.jsdelivr.net/npm/devextreme@24.1.3/dist/css/dx.light.css" rel="stylesheet" />
+
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  @* <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script> *@
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     
     <!-- SweetAlert2  -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+@* <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> *@
 
   <!-- CSS -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
@@ -27,6 +35,7 @@
 
 
 <body class="bg-white font-sans min-h-screen flex flex-col">
+  
   <!-- Top Banner -->
   <div class="bg-black text-white text-center text-sm py-2">
     Tận hưởng giao hàng miễn phí toàn quốc với hoá đơn từ 999.000 đ
@@ -41,7 +50,7 @@
     </div>
     <nav class="hidden md:flex space-x-6 text-sm text-gray-700">
       <a href="/" class="hover:text-black">Trang chủ</a>
-      <a href="/san-pham" class="hover:text-black">Sản phẩm</a>
+      <a href="/product" class="hover:text-black">Sản phẩm</a>
       <a href="/khuyen-mai" class="hover:text-black">Khuyến mãi</a>
       <a href="/ve-chung-toi" class="hover:text-black">Về chúng tôi</a>
       <a href="/lien-he" class="hover:text-black">Liên hệ</a>
@@ -50,15 +59,18 @@
     @if (User.Identity?.IsAuthenticated == true)
     {
         <div x-data="{ open: false }" class="relative">
-    <button @@click="open = !open" class="hover:underline">
-        👤 @User.Identity.Name
-    </button>
+    <button x-on:click="open = !open" class="hover:underline">
+    👤 @User.Identity.Name
+  </button>
 
-    <div x-show="open" @@click.away="open = false"
-         class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50">
-        <a href="/user/profile" class="block px-4 py-2 hover:bg-gray-100 text-sm">Thông tin cá nhân</a>
-        <a href="/auth/logout" class="block px-4 py-2 hover:bg-gray-100 text-sm">Đăng xuất</a>
-    </div>
+    <div x-show="open"
+       x-on:click.away="open = false"
+       x-transition
+       class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50"
+       style="display: none;">
+    <a href="/user/profile" class="block px-4 py-2 hover:bg-gray-100 text-sm">Thông tin cá nhân</a>
+    <a href="/auth/logout" class="block px-4 py-2 hover:bg-gray-100 text-sm">Đăng xuất</a>
+  </div>
 </div>
 
     }
@@ -68,7 +80,7 @@
     }
 
     <div>
-        <a href="/gio-hang" class="hover:underline">Giỏ hàng</a>
+        <a href="/#" class="hover:underline">Giỏ hàng</a>
     </div>
 </div>
 
@@ -174,7 +186,12 @@
 
   <button class="fixed bottom-4 right-4 bg-yellow-200 px-4 py-2 rounded-full shadow-md">Liên hệ</button>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- DevExtreme -->
+<script src="https://cdn.jsdelivr.net/npm/devextreme@24.1.3/dist/js/dx.all.js"></script>
   <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="~/js/site.js" asp-append-version="true"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.4/dist/cdn.min.js"></script>
@@ -186,7 +203,7 @@
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" asp-append-version="true"></script>
 <script>
   AOS.init({
-    once: false,            // chạy lại mỗi lần scroll (nếu cần)
+    once: true,            // chạy lại mỗi lần scroll (nếu cần)
     duration: 1000,         // thời gian hiệu ứng
     offset: 120             // khoảng cách bắt đầu hiệu ứng từ viewport
   });
