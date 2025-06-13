@@ -69,6 +69,7 @@ namespace PD_Store.Controllers
                 var result = await _authService.Login(login, returnUrl ?? "");
                 if (result.Status == Contants.StatusCodeSuccessed)
                 {
+                    HttpContext.Session.SetString("Username", login.UserName);
                     if (!string.IsNullOrEmpty(returnUrl))
                     {
                         return LocalRedirect(returnUrl);

@@ -56,21 +56,24 @@
       <a href="/lien-he" class="hover:text-black">Liên hệ</a>
     </nav>
     <div class="hidden md:flex space-x-4 text-sm">
-    @if (User.Identity?.IsAuthenticated == true)
+    @{
+    var userName = Context.Session.GetString("Username");
+    }
+    @if (!string.IsNullOrEmpty(userName))
     {
         <div x-data="{ open: false }" class="relative">
-    <button x-on:click="open = !open" class="hover:underline">
-    👤 @User.Identity.Name
-  </button>
-
-    <div x-show="open"
-       x-on:click.away="open = false"
-       x-transition
-       class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-50"
-       style="display: none;">
-    <a href="/user/profile" class="block px-4 py-2 hover:bg-gray-100 text-sm">Thông tin cá nhân</a>
-    <a href="/auth/logout" class="block px-4 py-2 hover:bg-gray-100 text-sm">Đăng xuất</a>
-  </div>
+    <button @@click="open = !open" class="hover:underline">
+        👤 @userName
+    </button>
+    <div
+        x-show="open"
+        @@click.away="open = false"
+        class="absolute mt-2 w-48 bg-white border rounded shadow-lg z-50"
+        x-transition
+    >
+        <a href="/user/profile" class="block px-4 py-2 hover:bg-gray-100">Thông tin cá nhân</a>
+        <a href="/auth/logout" class="block px-4 py-2 hover:bg-gray-100">Đăng xuất</a>
+    </div>
 </div>
 
     }

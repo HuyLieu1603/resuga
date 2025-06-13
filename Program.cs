@@ -18,6 +18,8 @@ builder.Services.AddCustomServices();
 // builder.Services.ConfigureCookie(builder.Configuration);
 var isDevelopment = builder.Environment.IsDevelopment();
 
+builder.Services.AddDistributedMemoryCache(); // Required for session
+
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.Cookie.Name = ".Resuga.Auth";
@@ -42,6 +44,8 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(opt =>
  .AddEntityFrameworkStores<AdminDbContext>()
  .AddDefaultTokenProviders();
 
+builder.Services.AddSession();
+
 // Read Kestrel configuration
 builder.WebHost.ConfigureKestrel(options =>
 {
@@ -61,6 +65,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+app.UseSession(); // ⚠️ phải đặt trước app.UseEndpoints()
 
 
 app.UseRouting();

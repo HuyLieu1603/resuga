@@ -14,13 +14,24 @@ namespace PD_Store.Repositories.Auth
     public class AuthService : IAuthService
     {
         private readonly AdminDbContext _context;
-
         private readonly ILogger _logger;
-
+        private readonly IHttpContextAccessor _httpContextAccessor;
         UserManager<ApplicationUser> _userManager;
-
         SignInManager<ApplicationUser> _signInManager;
 
+        public AuthService(
+            AdminDbContext context,
+            ILoggerFactory loggerFactory,
+            UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager,
+            IHttpContextAccessor httpContextAccessor) // Add this line
+        {
+            _context = context;
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _logger = loggerFactory.CreateLogger<AuthService>();
+            _httpContextAccessor = httpContextAccessor; // Add this line
+        }
         public AuthService(
             AdminDbContext context,
             ILoggerFactory loggerFactory,
@@ -113,6 +124,7 @@ namespace PD_Store.Repositories.Auth
             }
             catch (Exception ex)
             {
+                _httpContextAccessor.HttpContext.Session.Clear();
                 _logger.LogError(ex, "Có lỗi xảy ra khi đăng nhập:");
                 result.Status = Helper.Contants.StatusCodeInternalServerError;
                 result.Message = "Không thể đăng nhập vào hệ thống, vui lòng báo IT Admin";
@@ -123,6 +135,8 @@ namespace PD_Store.Repositories.Auth
         //LOG OUT
         public async Task LogOut()
         {
+            _httpContextAccessor.HttpContext.Session.Clear();
+
             await _signInManager.SignOutAsync();
         }
 
